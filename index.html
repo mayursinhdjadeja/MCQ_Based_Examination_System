@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online MCQ Exam Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--ENROLLMENT FORM-->
+  <form id="startForm" class="form-box">
+    <div class="logo">
+      <img src="MU_LOGO.png" alt="College Logo">
+    </div>
+    <h2>Enter Your Details</h2>
+    <div class="form-group">
+      <label for="enrollField">Enrollment No:</label>
+      <input type="text" id="enrollField" required>
+    </div>
+    <div class="form-group">
+      <label for="nameField">Name:</label>
+      <input type="text" id="nameField" required>
+    </div>
+    <div class="form-group">
+      <label for="divisionField">Division:</label>
+      <select id="divisionField" required>
+        <option value="">Select Division</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+      </select>
+    </div> 
+    <div class="form-group">
+      <label for="examTypeField">Exam Type:</label>
+      <select id="examTypeField" required>
+        <option value="">Select Exam Type</option>
+        <option value="Class Test">Class Test</option>
+        <option value="MID-1">MID-1</option>
+        <option value="MID-2">MID-2</option>
+      </select>
+    </div>
+    <div class="btn-container">
+      <button type="submit" class="btn-green">Start Exam</button>
+    </div>
+  </form>
+
+  <!--WAITING , EXAM & SUCCESS CONTAINER-->
+  <div class="container" style="display:none;">
+    <!-- Waiting Screen -->
+    <div id="waitingScreen" class="form-box" style="display:none;">
+      <h3>Exam will start in...</h3>
+      <div id="countdown" class="countdown">5</div>
+    </div>
+    <!-- Exam Form -->
+    <form id="examForm" class="form-box" style="display:none;">
+      <div class="logo">
+        <img src="MU_LOGO.png" alt="College Logo">
+      </div>
+      <!-- Display exam details (change it as needed) -->
+      <h2 id="examTitle">Class Test</h2>
+      <h3 id="examSubjectDisplay">Subject: DBMS-1</h3>
+      <h3 id="examMarksDisplay">Marks: 10</h3>
+      <h3 id="examTimeDisplay">Time: 10 Minutes</h3>
+      <div id="timer" class="timer"></div>
+      <div id="progress" class="progress"></div>
+      <div id="questions"></div>
+      <div class="nav-buttons">
+        <button type="button" id="prevBtn">Previous</button>
+        <button type="button" id="nextBtn">Next</button>
+        <button type="button" id="submitExamBtn">Submit Exam</button>
+      </div>
+    </form>
+
+    <!-- SUCCESS Card -->
+    <div id="successCard" class="success-card"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

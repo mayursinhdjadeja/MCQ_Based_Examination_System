@@ -1,0 +1,241 @@
+/* BASE STYLES */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ENROLLMENT FORM (#startForm) */
+#startForm {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#startForm .logo img {
+  max-width: 210px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+#startForm h2 {
+  color: #0d47a1;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+#startForm .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+#startForm input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+#startForm select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-green {
+  background: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-green:hover {
+  background: #43a047;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 100%;
+  max-width: 800px;
+  min-height: 600px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* WAITING SCREEN (countdown) */
+#waitingScreen {
+  display: flex;
+  justify-content: left;   
+  align-items: left;
+}
+.countdown {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgb(160, 9, 9);
+  padding: 220px;
+  margin-top: auto;
+}
+
+/* EXAM FORM (#examForm) */
+#examForm .logo {
+  text-align: center;
+}
+#examForm .logo img {
+  max-width: 240px;
+  margin-bottom: 20px;
+}
+#examForm h2 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+#examForm h3 {
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.nav-buttons button {
+  flex: 1;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0d47a1;
+  color: #fff;
+  font-weight: bold;
+}
+.nav-buttons button:hover {
+  background: #1565c0;
+}
+.question-card {
+  background: #f9fbfd;
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.option {
+  display: block;
+  margin: 6px 0;
+  color: #444;
+}
+.timer, .progress {
+  text-align: center;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+/* SUCCESS CARD */
+.success-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: #e8f5e9;          
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  color: #2e7d32;
+  font-weight: bold;
+  display: none;
+  text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+/* Tablets */
+@media (max-width: 768px) {
+  #startForm,
+  .container {
+    width: 90%;
+    max-width: 100%;
+    padding: 25px;
+  }
+  #startForm input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .countdown {
+    font-size: 3rem;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  #examForm .logo img {
+    max-width: 180px;
+  }
+  #startForm .logo img {
+    max-width: 170px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+    justify-content: flex-start;
+  }
+  #startForm,
+  .container {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  #startForm h2,
+  #examForm h2 {
+    font-size: 1.3rem;
+  }
+  #examForm h3 {
+    font-size: 0.95rem;
+  }
+  .question-card {
+    padding: 12px;
+  }
+  .option {
+    font-size: 0.9rem;
+  }
+  .countdown {
+    font-size: 2rem;
+    padding: 60px 10px;
+    text-align: center;
+  }
+  .nav-buttons {
+    flex-direction: column;
+  }
+  .nav-buttons button {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .btn-green {
+    width: 100%;
+  }
+  #startForm .logo img {
+    max-width: 140px;
+  }
+  #examForm .logo img {
+    max-width: 150px;
+  }
+}
